@@ -1,0 +1,12 @@
+Task 1: BERT Emotion Detection - Classification Report
+Dataset: Custom 4 emotions (Joy, Sadness, Neutral, Anger)
+              precision    recall  f1-score   support
+
+         Joy     0.5742    0.5043    0.5370       583
+     Sadness     0.5635    0.6105    0.5860       516
+     Neutral     0.6822    0.7582    0.7182       521
+       Anger     0.8270    0.7846    0.8053       585
+
+    accuracy                         0.6635      2205
+   macro avg     0.6617    0.6644    0.6616      2205
+weighted avg     0.6643    0.6635    0.6625      2205
