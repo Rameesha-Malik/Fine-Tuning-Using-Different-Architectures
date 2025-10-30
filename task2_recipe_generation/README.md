@@ -1,7 +1,4 @@
 # GPT-2 Recipe Generator
-
-**Student:** Rameesha | **Course:** Advanced NLP (Project 02)
-
 ---
 
 ###  Overview
@@ -13,13 +10,13 @@ Type *“Chocolate Cake”* and the model writes ingredients and directions auto
 
 ### Dataset
 
-* Source: Kaggle recipe dataset
+* Source: Kaggle recipe dataset [https://www.kaggle.com/datasets/nazmussakibrupol/3a2mext/data]
 * Fields: `title`, `ingredients`, `directions`
 * Used ≈ 3 000 samples for quick training on Colab
 
 ---
 
-### ⚙️ Model
+###  Model
 
 | Item       | Value                  |
 | ---------- | ---------------------- |
@@ -30,59 +27,9 @@ Type *“Chocolate Cake”* and the model writes ingredients and directions auto
 | Frameworks | PyTorch + Transformers |
 
 ---
+### Deploy link
 
-### Results
-
-| Metric        | Score |
-| ------------- | ----- |
-| BLEU          | 0.066 |
-| ROUGE-1       | 0.248 |
-| ROUGE-2       | 0.122 |
-| Training Loss | 1.28  |
-
----
-
-### 💻Quick Demo
-
-```python
-import gradio as gr
-
-def generate_recipe(title):
-    prompt = f"Title: {title} |"
-    inputs = tokenizer(prompt, return_tensors='pt').to(device)
-    with torch.no_grad():
-        outputs = model.generate(inputs['input_ids'], max_length=300)
-    return tokenizer.decode(outputs[0], skip_special_tokens=True)
-
-demo = gr.Interface(
-    fn=generate_recipe,
-    inputs="text",
-    outputs="text",
-    title="GPT-2 Recipe Generator by Rameesha"
-)
-demo.launch()
-```
-
----
-
-###  Example
-
-**Input:** `Chocolate Cake`
-**Output:**
-
-```
-Ingredients: flour, cocoa, eggs, sugar, butter
-Directions: mix all and bake at 350 °F for 30 min
-```
-
----
-
-###  How to Run
-
-1. Open Google Colab
-2. Upload notebook + dataset to Drive
-3. Run cells to train and save model
-4. Launch Gradio demo
+https://huggingface.co/spaces/rameesha146/recipe-generation-finetune-gpt-2
 
 ---
 
