@@ -27,6 +27,10 @@ Type *“Chocolate Cake”* and the model writes ingredients and directions auto
 | Frameworks | PyTorch + Transformers |
 
 ---
+### Saved finetuned model link
+
+https://huggingface.co/rameesha146/gpt2_recipe_model
+
 ### Deploy link
 
 https://huggingface.co/spaces/rameesha146/recipe-generation-finetune-gpt-2
