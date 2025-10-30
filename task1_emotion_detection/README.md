@@ -1,6 +1,6 @@
 #  Task 1 – Emotion Detection Using BERT
 ````markdown
-  this is my task 1 from **NLP / Machine Learning Project 2**.  
+this is my task 1 from **NLP / Machine Learning Project 2**.  
 the goal was to train a BERT model that can detect emotions (joy, sadness, anger, neutral) from text.
 
 ## project overview  
@@ -15,12 +15,12 @@ each record has:
 - `content` → the text sentence  
 - `sentiment` → numeric emotion label  
 
-| label | emotion  |
+| label  | emotion   |
 |--------|-----------|
-| 0 | Joy |
-| 1 | Sadness |
-| 2 | Neutral |
-| 3 | Anger |
+| 0      | Joy       |
+| 1      | Sadness   |
+| 2      | Neutral   |
+| 3      | Anger     |
 
 split ratio:
 - 80 % train  
