@@ -1,21 +1,13 @@
 #  Task 1 – Emotion Detection Using BERT
 ````markdown
-  
-
-this is my task 1 from **NLP / Machine Learning Project 2**.  
+  this is my task 1 from **NLP / Machine Learning Project 2**.  
 the goal was to train a BERT model that can detect emotions (joy, sadness, anger, neutral) from text.
 
----
-
 ## project overview  
-
 in this task i fine-tuned a pre-trained **bert-base-uncased** model from hugging face on a labeled dataset of four emotions.  
 after training, the model can predict the emotion behind any sentence or tweet-like text.
 
----
-
 ## dataset  
-
 **source:** [Kaggle – Emotion Categories (Neutral, Joy, Sadness, Anger)](https://www.kaggle.com/datasets/faiqahmad01/emotion-categories-neutraljoysadnessanger)  
 **total samples:** 22 050  
 
@@ -35,10 +27,7 @@ split ratio:
 - 10 % validation  
 - 10 % test  
 
----
-
 ##  setup  
-
 run this project on **Google Colab** or any python 3.10+ environment.  
 install all needed packages first:
 
@@ -47,8 +36,6 @@ pip install transformers datasets torch scikit-learn pandas matplotlib seaborn g
 ````
 
 mount your drive and update the dataset paths in the notebook.
-
----
 
 ##  model details
 
