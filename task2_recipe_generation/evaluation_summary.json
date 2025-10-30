@@ -1,0 +1,9 @@
+{
+    "model_name": "gpt2_recipe_model",
+    "timestamp": "2025-10-30 17:36:12",
+    "bleu_score": 0.0781,
+    "rouge1": 0.3119,
+    "rouge2": 0.0878,
+    "rougeL": 0.2201,
+    "total_test_samples": 10
+}
