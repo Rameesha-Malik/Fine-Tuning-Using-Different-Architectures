@@ -64,27 +64,10 @@ training handled using `Trainer` and `TrainingArguments` from 🤗 Transformers.
 
 ## results
 
-| metric        | score  |
-| ------------- | ------ |
-| accuracy      | ~ 0.91 |
-| f1 (macro)    | ~ 0.90 |
-| f1 (weighted) | ~ 0.91 |
-
-✅ best model saved in `my_bert_emotion_model/`
-✅ confusion matrix saved as `confusion_matrix.png`
-✅ classification report saved as `classification_report.txt`
-✅ summary saved as `results_summary.json`
-
----
-
-##  example predictions
-
-| text                                | predicted emotion |
-| ----------------------------------- | ----------------- |
-| “i’m so happy and excited today!”   | joy               |
-| “this is the worst day of my life.” | sadness           |
-| “the weather is nice today.”        | neutral           |
-| “i’m furious about what happened!”  | anger             |
+best model saved in `my_bert_emotion_model/`
+confusion matrix saved as `confusion_matrix.png`
+classification report saved as `classification_report.txt`
+summary saved as `results_summary.json`
 
 ---
 
@@ -92,30 +75,7 @@ training handled using `Trainer` and `TrainingArguments` from 🤗 Transformers.
 
 i built a simple interactive demo with **gradio** so anyone can test the model:
 
-```python
-import gradio as gr
-
-def predict_emotion(text):
-    inputs = tokenizer(text, return_tensors='pt', truncation=True, padding=True)
-    with torch.no_grad():
-        outputs = model(**inputs)
-    probs = torch.nn.functional.softmax(outputs.logits, dim=-1)
-    pred = torch.argmax(probs, dim=1).item()
-    return list(emotions.values())[pred]
-
-gr.Interface(
-    fn=predict_emotion,
-    inputs="text",
-    outputs="text",
-    title="🎭 Emotion Detector",
-    description="Detect Joy, Sadness, Anger, or Neutral from text. Made by Rameesha ❤️"
-).launch()
-```
-
-this launches a small ui in colab with live predictions.
-
 ---
-
 ## what i learned
 
 * how to fine-tune bert for classification
@@ -128,6 +88,6 @@ this launches a small ui in colab with live predictions.
 ## author
 
 **Rameesha**
-student | project 2 – Task 1 (Emotion Detection using BERT)
+project 2 – Task 1 (Emotion Detection using BERT)
 ```
 
